@@ -24,12 +24,9 @@ int main(){
 
   	for(int i=0; i<13; i++){
   		Remove(&btree, reg2[i], &ordem);
-  		printf("ok");
-  		printf("\n");
+	  	printf("\nImpressão\n");
+	  	Imprime(&btree, 0);
   	}
-
-  	printf("\nImpressão\n");
-  	Imprime(&btree, 0);
 	
 	return 0;
 
