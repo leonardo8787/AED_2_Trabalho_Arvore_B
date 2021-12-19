@@ -7,7 +7,7 @@ int main(){
 	
 	Record r;
   	Pagina *btree = CreateBTree();
-  	int ordem = 1;
+  	int ordem = 2;
 
   	printf("\nInserção\n");
   	for(int i=0; i<13; i++){
@@ -17,9 +17,12 @@ int main(){
     	printf("\n");
   	}
   	
+  	printf("\n\n");
   	printf("\nImpressão\n");
   	Imprime(&btree, 0);
 
+  	printf("\n\n");
+  	printf("==============");
 	printf("\nRemoção\n");
 
   	for(int i=0; i<13; i++){
