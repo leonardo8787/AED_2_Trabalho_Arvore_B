@@ -280,14 +280,16 @@ void Retira(Pagina **p, int key){
 void Imprime(Pagina **p, int level){ 
   long i;
   
-  if (*p == NULL) return;
-  
-  printf("Nivel %d: ", level);
-  for (i = 0; i < (*p)->n; i++)
-    printf("%d ",(*p)->r[i].key);
-  putchar('\n');
-  level++;
-
-  for (i = 0; i <= (*p)->n; i++)
-    Imprime(&(*p)->p[i], level);
+  if (*p == NULL){
+    return;
+  } else {
+    printf("Nivel %d: ", level);
+    for (i = 0; i < (*p)->n; i++){
+      printf("%d ",(*p)->r[i].key);
+    }
+    putchar('\n');
+    level++;
+    for (i = 0; i <= (*p)->n; i++)
+      Imprime(&(*p)->p[i], level);
+  }
 }

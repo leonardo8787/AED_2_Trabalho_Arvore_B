@@ -2,32 +2,33 @@
 
 int main(){
 
-	int reg1[] = {10,2,7,5,3,9,16,4,11,1,6,23,14};
-	int reg2[] = {10,2,7,5,3,9,16,4,11,1,6,23,14};
+	int reg1[] = {1, 33, 99, 54, 13};
+	int reg2[] = {55, 91, 07, 1, 9, 40, 80};
 	
 	Record r;
   	Pagina *btree = CreateBTree();
   	int ordem = 2;
 
   	printf("\nInserção\n");
-  	for(int i=0; i<13; i++){
+  	printf("==========================");
+  	for(int i=0; i<5; i++){
     	r.key = reg1[i];
     	Insere(&btree, r);
-    	printf("ok");
-    	printf("\n");
+	  	printf("\nImpressão\n");
+	  	Imprime(&btree, 0);
   	}
   	
   	printf("\n\n");
-  	printf("\nImpressão\n");
+  	printf("\nImpressão Total\n");
   	Imprime(&btree, 0);
 
   	printf("\n\n");
-  	printf("==============");
+  	printf("==========================");
 	printf("\nRemoção\n");
 
-  	for(int i=0; i<13; i++){
+  	for(int i=0; i<7; i++){
   		Remove(&btree, reg2[i], &ordem);
-	  	printf("\nImpressão\n");
+	  	printf("\nImpressão Total\n");
 	  	Imprime(&btree, 0);
   	}
 	
